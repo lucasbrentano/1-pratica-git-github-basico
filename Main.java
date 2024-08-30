@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Random;
 
 public class Main {
@@ -28,8 +29,27 @@ public class Main {
     }
 
     //Método b Luis
+    public static boolean hasRepeat(ArrayList<Integer> l) {
+        HashSet<Integer> uniqueElements = new HashSet<>();
+        for (Integer num : l) {
+            if (uniqueElements.contains(num)) {
+                return true;
+            }
+            uniqueElements.add(num);
+        }
+        return false;
+    }
+
     //Método c Yan
     //Método d Lucas
+
     //Método e Luis
+    public static ArrayList<Integer> union(ArrayList<Integer> l1, ArrayList<Integer> l2) {
+        HashSet<Integer> unionSet = new HashSet<>();
+        unionSet.addAll(l1);
+        unionSet.addAll(l2);
+        return new ArrayList<>(unionSet);
+    }
+    
     //Método f Yan
 }
