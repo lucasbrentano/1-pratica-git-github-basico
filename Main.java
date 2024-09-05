@@ -1,6 +1,4 @@
 import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Random;
 
 public class Main {
     public static void main (String[]args){
@@ -31,6 +29,9 @@ public class Main {
         // Questão b
         boolean repete = hasRepeat(elementos);
         System.out.println(repete);
+        // Questão c
+        int elementosRepetidos = nroRepeat(elementos2);
+        System.out.println(elementosRepetidos);
         // Questão d
         ArrayList<Integer> metodoRepeat = listRepeat(elementos2);
         System.out.println(metodoRepeat);
@@ -74,6 +75,17 @@ public class Main {
     }
 
     //Método c Lucas
+    public static int nroRepeat (ArrayList<Integer> l) {
+        int counter = 0;
+        for (int i = 0; i < l.size(); i++) {
+            for (int j = i + 1; j < l.size(); j++) {
+                if (l.get(i).equals(l.get(j))) {
+                    counter++;
+                }
+            }
+        }
+        return counter;
+    }
 
     //Método d Lucas
     public static ArrayList<Integer> listRepeat (ArrayList<Integer> l) {
