@@ -23,7 +23,8 @@
 hs_err_pid*
 replay_pid*
 
-# não sei de onde saiu
+# VSCode and IntelliJ
 /.history
 /.idea
+/.vs
 /production
